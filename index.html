@@ -242,13 +242,46 @@
 
   .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.25fr 1fr;
     gap: 2.5rem;
   }
 
   .about-grid p {
     color: var(--ink-soft);
     max-width: 48ch;
+  }
+
+  .about-side {
+    display: flex;
+    gap: 1.75rem;
+    align-items: flex-start;
+  }
+
+  .entrance-photo {
+    margin: 0;
+    flex-shrink: 0;
+    width: 150px;
+  }
+
+  .entrance-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--dust-line);
+    box-shadow: 0 6px 16px var(--card-shadow);
+  }
+
+  .entrance-photo figcaption {
+    margin-top: 0.4rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.02em;
+    color: var(--ink-soft);
+    opacity: 0.75;
+  }
+
+  .about-side .principles {
+    flex: 1;
   }
 
   .principles {
@@ -491,6 +524,8 @@
       width: auto;
     }
     .about-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+    .about-side { flex-direction: column; }
+    .entrance-photo { width: 130px; }
     .cat-grid { grid-template-columns: repeat(2, 1fr); }
     .sign-inner { grid-template-columns: 1fr; gap: 1.5rem; }
     .map-frame iframe { height: 240px; }
@@ -549,29 +584,35 @@
       <p>Brienz selbst ist seit jeher für sein Handwerk bekannt — von der Holzschnitzerei bis zur Geigenbauschule — und die Nähe zu dieser Tradition prägt auch das Sortiment im Laden. Viele Stücke stammen aus Haushaltsauflösungen und Nachlässen aus der Region, andere haben einen weiteren Weg hinter sich, bevor sie in der Brunngasse ihren Platz fanden.</p>
       <p>Für Details zum aktuellen Sortiment, eine Schätzung oder eine konkrete Anfrage lohnt sich der persönliche Besuch vor Ort am meisten — viele Stücke lassen sich in Fotos nur schwer einfangen.</p>
     </div>
-    <ul class="principles">
-      <li>
-        <span class="mark">I.</span>
-        <div class="body">
-          <h3>Handverlesen</h3>
-          <p>Jedes Stück wird sorgfältig ausgewählt, nicht wahllos angehäuft.</p>
-        </div>
-      </li>
-      <li>
-        <span class="mark">II.</span>
-        <div class="body">
-          <h3>Mitten im Dorf</h3>
-          <p>Zentral an der Brunngasse gelegen, gut erreichbar zu Fuß.</p>
-        </div>
-      </li>
-      <li>
-        <span class="mark">III.</span>
-        <div class="body">
-          <h3>Persönliche Beratung</h3>
-          <p>Fragen zu Herkunft und Zustand werden vor Ort gerne beantwortet.</p>
-        </div>
-      </li>
-    </ul>
+    <div class="about-side">
+      <figure class="entrance-photo">
+        <img src="eingang.jpg" alt="Eingang von Münch Antiquitäten an der Brunngasse in Brienz, mit Ladenschild und Blumenschmuck" width="387" height="516" loading="lazy" />
+        <figcaption>Der Eingang an der Brunngasse</figcaption>
+      </figure>
+      <ul class="principles">
+        <li>
+          <span class="mark">I.</span>
+          <div class="body">
+            <h3>Handverlesen</h3>
+            <p>Jedes Stück wird sorgfältig ausgewählt, nicht wahllos angehäuft.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mark">II.</span>
+          <div class="body">
+            <h3>Mitten im Dorf</h3>
+            <p>Zentral an der Brunngasse gelegen, gut erreichbar zu Fuß.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mark">III.</span>
+          <div class="body">
+            <h3>Persönliche Beratung</h3>
+            <p>Fragen zu Herkunft und Zustand werden vor Ort gerne beantwortet.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
 
