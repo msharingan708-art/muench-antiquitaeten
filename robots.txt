@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://msharingan708-art.github.io/muench-antiquitaeten/sitemap.xml
