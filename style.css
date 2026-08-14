@@ -331,6 +331,26 @@ section.about {
   max-width: none;
 }
 
+.side-note {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 2px solid var(--dust-line);
+}
+
+.side-note h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 0.98rem;
+  margin: 0 0 0.35rem;
+  color: var(--olive-deep);
+}
+
+.side-note p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  max-width: none;
+}
+
 /* ---------- Kategorien ---------- */
 
 section.categories {
@@ -412,6 +432,35 @@ section.provenance {
 
 .links-list a:hover {
   color: var(--olive-deep);
+}
+
+/* ---------- FAQ ---------- */
+
+section.faq {
+  padding: 0 0 3rem;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2.5rem;
+}
+
+.faq-item h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.02rem;
+  margin: 0 0 0.4rem;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  max-width: 48ch;
+}
+
+@media (max-width: 760px) {
+  .faq-grid { grid-template-columns: 1fr; gap: 1.25rem; }
 }
 
 /* ---------- Karte ---------- */
