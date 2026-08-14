@@ -46,6 +46,8 @@
   </div>
 </header>
 
+<main>
+
 <section class="hero">
   <div class="wrap hero">
     <div>
@@ -57,7 +59,10 @@
       </div>
     </div>
     <figure class="hero-photo">
-      <img src="hero.jpg" title="Antiquitätenladen von Münch Antiquitäten in Brienz" alt="Blick in einen vollgestellten Antiquitätenladen mit Möbeln, Lampen, Bildern und Sammlerstücken" width="900" height="675" loading="eager" />
+      <picture>
+        <source type="image/webp" srcset="hero-600.webp 600w, hero.webp 900w" sizes="(max-width: 760px) 100vw, 60vw" />
+        <img src="hero.jpg" title="Antiquitätenladen von Münch Antiquitäten in Brienz" alt="Blick in einen vollgestellten Antiquitätenladen mit Möbeln, Lampen, Bildern und Sammlerstücken" width="900" height="675" loading="eager" fetchpriority="high" />
+      </picture>
       <figcaption>Sinnbild eines Antiquitätenladens · Foto: Jeff Gogarty, CC BY-SA 2.0</figcaption>
     </figure>
   </div>
@@ -74,7 +79,10 @@
     </div>
     <div class="about-side">
       <figure class="entrance-photo">
-        <img src="eingang.jpg" title="Eingang von Münch Antiquitäten an der Brunngasse" alt="Eingang von Münch Antiquitäten an der Brunngasse in Brienz, mit Ladenschild und Blumenschmuck" width="387" height="516" loading="lazy" />
+        <picture>
+          <source type="image/webp" srcset="eingang.webp" />
+          <img src="eingang.jpg" title="Eingang von Münch Antiquitäten an der Brunngasse" alt="Eingang von Münch Antiquitäten an der Brunngasse in Brienz, mit Ladenschild und Blumenschmuck" width="387" height="516" loading="lazy" />
+        </picture>
         <figcaption>Der Eingang an der Brunngasse</figcaption>
       </figure>
       <ul class="principles">
@@ -168,6 +176,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <footer class="sign">
   <div class="wrap sign-inner">

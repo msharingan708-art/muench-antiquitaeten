@@ -488,7 +488,7 @@ section.map {
 
 .todo::before {
   content: "✎";
-  color: var(--leather);
+  color: var(--leather-deep);
 }
 
 /* ---------- Footer / Schild ---------- */
