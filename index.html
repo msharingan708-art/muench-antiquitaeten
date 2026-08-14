@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Münch Antiquitäten GmbH — Brienz</title>
+<meta name="description" content="Münch Antiquitäten GmbH in Brienz BE — Antiquitäten, Möbel und Fundstücke mit Geschichte am Fuss der Berner Alpen." />
+<style>
+  @font-face {
+    font-family: 'Fraunces';
+    src: local('Georgia');
+    font-weight: 400 700;
+  }
+
+  :root {
+    --paper: #f2ede3;
+    --paper-raised: #ece5d6;
+    --ink: #2b2620;
+    --ink-soft: #5a5245;
+    --leather: #8a5a3b;
+    --leather-deep: #6e4529;
+    --olive: #5c6650;
+    --dust: #c9c0ac;
+    --dust-line: #d8d0bd;
+    --card-shadow: rgba(43, 38, 32, 0.14);
+    --warn-bg: #f4e8d6;
+    --warn-border: #c9a05f;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #221d17;
+      --paper-raised: #2b241b;
+      --ink: #ece5d6;
+      --ink-soft: #b9ae98;
+      --leather: #c98552;
+      --leather-deep: #e0a06a;
+      --olive: #8a9678;
+      --dust: #4a4032;
+      --dust-line: #3a3226;
+      --card-shadow: rgba(0, 0, 0, 0.4);
+      --warn-bg: #332a1a;
+      --warn-border: #7a5c2e;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #221d17;
+    --paper-raised: #2b241b;
+    --ink: #ece5d6;
+    --ink-soft: #b9ae98;
+    --leather: #c98552;
+    --leather-deep: #e0a06a;
+    --olive: #8a9678;
+    --dust: #4a4032;
+    --dust-line: #3a3226;
+    --card-shadow: rgba(0, 0, 0, 0.4);
+    --warn-bg: #332a1a;
+    --warn-border: #7a5c2e;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.55;
+    background-image:
+      radial-gradient(circle at 18% 8%, var(--paper-raised) 0%, transparent 42%),
+      radial-gradient(circle at 88% 55%, var(--paper-raised) 0%, transparent 38%);
+  }
+
+  a { color: inherit; }
+
+  img { max-width: 100%; display: block; }
+
+  .wrap {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+
+  /* ---------- Header ---------- */
+
+  header.top {
+    padding: 2rem 0 1.25rem;
+    border-bottom: 2px solid var(--dust-line);
+  }
+
+  .top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .brand {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  .brand em {
+    color: var(--leather);
+    font-style: italic;
+  }
+
+  .tagline {
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- Hero ---------- */
+
+  .hero {
+    padding: 2.75rem 0 3rem;
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(1.9rem, 4.5vw, 2.9rem);
+    line-height: 1.1;
+    margin: 0 0 1rem;
+    text-wrap: balance;
+  }
+
+  .hero h1 em {
+    color: var(--leather);
+    font-style: italic;
+  }
+
+  .hero p {
+    max-width: 42ch;
+    color: var(--ink-soft);
+    font-size: 1.02rem;
+  }
+
+  .hero-cta {
+    margin-top: 1.4rem;
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.68rem 1.3rem;
+    border-radius: 3px;
+    text-decoration: none;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1.5px solid var(--ink);
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+
+  .btn-solid {
+    background: var(--leather);
+    border-color: var(--leather-deep);
+    color: #f8f3e9;
+  }
+
+  .btn-solid:hover { transform: translateY(-1px); background: var(--leather-deep); }
+  .btn-line:hover { transform: translateY(-1px); background: var(--paper-raised); }
+
+  .hero-tag {
+    position: relative;
+    justify-self: center;
+    background: var(--paper-raised);
+    border: 1.5px dashed var(--dust);
+    border-radius: 10px;
+    padding: 1.5rem 1.3rem;
+    width: 200px;
+    transform: rotate(3deg);
+    box-shadow: 0 10px 24px var(--card-shadow);
+  }
+
+  .hero-tag::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 1.5px dashed var(--dust);
+  }
+
+  .hero-tag .stamp {
+    font-family: 'Courier New', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--olive);
+  }
+
+  .hero-tag .place {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--leather);
+    margin: 0.35rem 0;
+    line-height: 1.15;
+  }
+
+  .hero-tag .note {
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- Über ---------- */
+
+  section.about {
+    padding: 1rem 0 3rem;
+  }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 1.4rem;
+    border-bottom: 2px solid var(--dust-line);
+    padding-bottom: 0.55rem;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .section-head h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(1.35rem, 3vw, 1.6rem);
+    margin: 0;
+  }
+
+  .section-head .count {
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-grid p {
+    color: var(--ink-soft);
+    max-width: 48ch;
+  }
+
+  .principles {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .principles li {
+    display: flex;
+    gap: 0.8rem;
+    align-items: baseline;
+    border-bottom: 1px dotted var(--dust);
+    padding-bottom: 0.85rem;
+  }
+
+  .principles li:last-child { border-bottom: none; }
+
+  .principles .mark {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    color: var(--leather);
+    font-size: 1.15rem;
+    flex-shrink: 0;
+  }
+
+  .principles .body h3 {
+    margin: 0 0 0.2rem;
+    font-size: 0.98rem;
+    font-family: Georgia, serif;
+  }
+
+  .principles .body p {
+    margin: 0;
+    font-size: 0.9rem;
+    max-width: none;
+  }
+
+  /* ---------- Kategorien ---------- */
+
+  section.categories {
+    padding: 0 0 3rem;
+  }
+
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.9rem;
+  }
+
+  .cat {
+    background: var(--paper-raised);
+    border: 1px solid var(--dust-line);
+    border-radius: 6px;
+    padding: 1.1rem 1rem;
+    box-shadow: 0 3px 10px var(--card-shadow);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .cat:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px var(--card-shadow);
+  }
+
+  .cat .glyph {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--leather);
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  .cat h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1rem;
+    margin: 0 0 0.25rem;
+  }
+
+  .cat p {
+    margin: 0;
+    font-size: 0.84rem;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- Karte ---------- */
+
+  section.map {
+    padding: 0 0 3rem;
+  }
+
+  .map-frame {
+    border: 1.5px solid var(--dust-line);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px var(--card-shadow);
+  }
+
+  .map-frame iframe {
+    width: 100%;
+    height: 320px;
+    border: 0;
+    display: block;
+  }
+
+  /* ---------- Platzhalter-Hinweis ---------- */
+
+  .todo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--warn-bg);
+    border: 1px dashed var(--warn-border);
+    border-radius: 4px;
+    padding: 0.15rem 0.55rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.03em;
+    color: var(--ink-soft);
+  }
+
+  .todo::before {
+    content: "✎";
+    color: var(--leather);
+  }
+
+  /* ---------- Footer / Schild ---------- */
+
+  footer.sign {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 2.75rem 0 2.25rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) footer.sign {
+      background: var(--paper-raised);
+      color: var(--ink);
+      border-top: 2px solid var(--dust-line);
+    }
+  }
+
+  :root[data-theme="dark"] footer.sign {
+    background: var(--paper-raised);
+    color: var(--ink);
+    border-top: 2px solid var(--dust-line);
+  }
+
+  .sign-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.75rem;
+  }
+
+  .sign-inner h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.1rem;
+    margin: 0 0 0.55rem;
+    color: var(--leather);
+  }
+
+  .sign-inner .block { font-size: 0.9rem; }
+  .sign-inner .block p { margin: 0.25rem 0; }
+
+  footer.sign .todo {
+    background: transparent;
+    border-color: rgba(242, 237, 227, 0.35);
+    color: inherit;
+    opacity: 0.85;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) footer.sign .todo {
+      border-color: var(--warn-border);
+    }
+  }
+
+  :root[data-theme="dark"] footer.sign .todo {
+    border-color: var(--warn-border);
+  }
+
+  .hours-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Courier New', monospace;
+    font-size: 0.83rem;
+    padding: 0.22rem 0;
+    border-bottom: 1px dotted rgba(242, 237, 227, 0.2);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .hours-row {
+      border-bottom: 1px dotted var(--dust);
+    }
+  }
+
+  :root[data-theme="dark"] .hours-row {
+    border-bottom: 1px dotted var(--dust);
+  }
+
+  .hours-row:last-child { border-bottom: none; }
+
+  .sign-note {
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(242, 237, 227, 0.15);
+    font-size: 0.74rem;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.03em;
+    opacity: 0.65;
+    text-align: center;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .sign-note {
+      border-top: 1px solid var(--dust-line);
+    }
+  }
+
+  :root[data-theme="dark"] .sign-note {
+    border-top: 1px solid var(--dust-line);
+  }
+
+  /* ---------- Responsive ---------- */
+
+  @media (max-width: 760px) {
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 2rem 0 2.25rem;
+      gap: 1.75rem;
+    }
+    .hero-tag {
+      justify-self: start;
+      transform: rotate(2deg);
+      width: auto;
+    }
+    .about-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+    .cat-grid { grid-template-columns: repeat(2, 1fr); }
+    .sign-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+    .map-frame iframe { height: 240px; }
+  }
+
+  @media (max-width: 420px) {
+    .cat-grid { grid-template-columns: 1fr; }
+    .hero-cta { flex-direction: column; align-items: flex-start; }
+    .btn { width: 100%; text-align: center; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+
+  a.btn:focus-visible, .cat:focus-visible {
+    outline: 2px solid var(--leather);
+    outline-offset: 2px;
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <div>
+      <div class="brand">Münch <em>Antiquitäten</em> GmbH</div>
+      <div class="tagline">Brienz, Berner Oberland</div>
+    </div>
+    <div class="tagline">Brunngasse 21 · 3855 Brienz</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero">
+    <div>
+      <h1>Antiquitäten mit <em>Herkunft</em>, mitten in Brienz.</h1>
+      <p>Möbel, Kleinkunst und Fundstücke aus dem Berner Oberland und darüber hinaus — jedes Stück handverlesen. Ein Besuch lohnt sich, ob auf der Durchreise oder gezielt auf der Suche.</p>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="#kategorien">Was wir führen</a>
+        <a class="btn btn-line" href="#besuch">Anfahrt &amp; Kontakt</a>
+      </div>
+    </div>
+    <div class="hero-tag" aria-hidden="true">
+      <div class="stamp">Zu finden in</div>
+      <div class="place">Brienz BE</div>
+      <div class="note">am Fusse der Berner Alpen</div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap about-grid">
+    <div>
+      <h2 style="font-family:'Fraunces',Georgia,serif; font-size:1.5rem; margin:0 0 0.9rem;">Über den Laden</h2>
+      <p>Münch Antiquitäten ist im Herzen von Brienz zu Hause, direkt an der Brunngasse. Wer sich für Möbel, Kleinkunst und Objekte mit Geschichte interessiert, findet hier eine sorgfältig zusammengestellte Auswahl.</p>
+      <p>Für Details zum aktuellen Sortiment oder eine Anfrage lohnt sich der persönliche Besuch vor Ort.</p>
+    </div>
+    <ul class="principles">
+      <li>
+        <span class="mark">I.</span>
+        <div class="body">
+          <h3>Handverlesen</h3>
+          <p>Jedes Stück wird sorgfältig ausgewählt, nicht wahllos angehäuft.</p>
+        </div>
+      </li>
+      <li>
+        <span class="mark">II.</span>
+        <div class="body">
+          <h3>Mitten im Dorf</h3>
+          <p>Zentral an der Brunngasse gelegen, gut erreichbar zu Fuss.</p>
+        </div>
+      </li>
+      <li>
+        <span class="mark">III.</span>
+        <div class="body">
+          <h3>Persönliche Beratung</h3>
+          <p>Fragen zu Herkunft und Zustand werden vor Ort gerne beantwortet.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="categories" id="kategorien">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Was wir führen</h2>
+      <span class="count">Auswahl &middot; wechselt laufend</span>
+    </div>
+    <div class="cat-grid">
+      <div class="cat">
+        <span class="glyph">M</span>
+        <h3>Möbel</h3>
+        <p>Einzelstücke mit Charakter, für Wohnung und Haus.</p>
+      </div>
+      <div class="cat">
+        <span class="glyph">K</span>
+        <h3>Kleinkunst</h3>
+        <p>Skulpturen, Figuren und dekorative Objekte.</p>
+      </div>
+      <div class="cat">
+        <span class="glyph">G</span>
+        <h3>Geschirr &amp; Glas</h3>
+        <p>Services und Einzelteile aus vergangenen Jahrzehnten.</p>
+      </div>
+      <div class="cat">
+        <span class="glyph">D</span>
+        <h3>Diverses</h3>
+        <p>Fundstücke, die sich keiner festen Kategorie zuordnen lassen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="map" id="besuch">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Anfahrt</h2>
+      <span class="todo">Karte zeigt Näherung, Standort noch zu bestätigen</span>
+    </div>
+    <div class="map-frame">
+      <iframe
+        title="Lage von Münch Antiquitäten GmbH, Brunngasse 21, Brienz"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Brunngasse+21,+3855+Brienz,+Schweiz&output=embed">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="sign">
+  <div class="wrap sign-inner">
+    <div class="block">
+      <h3>Adresse</h3>
+      <p>Münch Antiquitäten GmbH<br />Brunngasse 21<br />3855 Brienz BE</p>
+    </div>
+    <div class="block">
+      <h3>Öffnungszeiten</h3>
+      <p><span class="todo">noch einzutragen</span></p>
+    </div>
+    <div class="block">
+      <h3>Kontakt</h3>
+      <p><span class="todo">Telefonnummer noch einzutragen</span></p>
+      <p><span class="todo">E-Mail noch einzutragen</span></p>
+    </div>
+  </div>
+  <div class="sign-note">Quelle: local.ch-Eintrag · Angaben ohne Öffnungszeiten/Telefon, bitte vor Ort ergänzen</div>
+</footer>
+
+</body>
+</html>
