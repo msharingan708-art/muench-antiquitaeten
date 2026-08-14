@@ -160,13 +160,11 @@
       <h2>Anfahrt</h2>
       <span class="todo">Karte zeigt Näherung, Standort noch zu bestätigen</span>
     </div>
-    <div class="map-frame">
-      <iframe
-        title="Lage von Münch Antiquitäten GmbH, Brunngasse 21, Brienz"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps?q=Brunngasse+21,+3855+Brienz,+Schweiz&output=embed">
-      </iframe>
+    <div class="map-frame" id="map-frame" data-map-src="https://www.google.com/maps?q=Brunngasse+21,+3855+Brienz,+Schweiz&output=embed">
+      <button type="button" class="map-placeholder" id="map-load-btn">
+        <span>Karte laden</span>
+        <small>Brunngasse 21, 3855 Brienz — lädt eingebettete Google-Karte</small>
+      </button>
     </div>
   </div>
 </section>
@@ -195,5 +193,6 @@
   <div class="sign-note">Quelle: local.ch-Eintrag · Angaben ohne Öffnungszeiten/Telefon, bitte vor Ort ergänzen</div>
 </footer>
 
+<script src="map-loader.js" defer></script>
 </body>
 </html>
