@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Münch Antiquitäten GmbH — Brienz</title>
-<meta name="description" content="Münch Antiquitäten GmbH in Brienz BE — Antiquitäten, Möbel und Fundstücke mit Geschichte am Fuss der Berner Alpen." />
+<meta name="description" content="Münch Antiquitäten GmbH in Brienz BE — Antiquitäten, Möbel und Fundstücke mit Geschichte am Fuß der Berner Alpen." />
 <style>
   @font-face {
     font-family: 'Fraunces';
@@ -13,50 +13,53 @@
   }
 
   :root {
-    --paper: #f2ede3;
-    --paper-raised: #ece5d6;
-    --ink: #2b2620;
-    --ink-soft: #5a5245;
+    --paper: #f3f1e9;
+    --paper-raised: #eae7dc;
+    --ink: #2b2a24;
+    --ink-soft: #5c594d;
     --leather: #8a5a3b;
     --leather-deep: #6e4529;
-    --olive: #5c6650;
-    --dust: #c9c0ac;
-    --dust-line: #d8d0bd;
-    --card-shadow: rgba(43, 38, 32, 0.14);
-    --warn-bg: #f4e8d6;
-    --warn-border: #c9a05f;
+    --olive: #55624c;
+    --olive-deep: #40492f;
+    --dust: #c7c2ac;
+    --dust-line: #dad6c5;
+    --card-shadow: rgba(43, 42, 36, 0.12);
+    --warn-bg: #eee9d8;
+    --warn-border: #a6a077;
   }
 
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --paper: #221d17;
-      --paper-raised: #2b241b;
-      --ink: #ece5d6;
-      --ink-soft: #b9ae98;
+      --paper: #1e1e19;
+      --paper-raised: #27271f;
+      --ink: #e9e6da;
+      --ink-soft: #b3af9d;
       --leather: #c98552;
       --leather-deep: #e0a06a;
-      --olive: #8a9678;
-      --dust: #4a4032;
-      --dust-line: #3a3226;
+      --olive: #93a17f;
+      --olive-deep: #b6c29e;
+      --dust: #46452f;
+      --dust-line: #38371f;
       --card-shadow: rgba(0, 0, 0, 0.4);
-      --warn-bg: #332a1a;
-      --warn-border: #7a5c2e;
+      --warn-bg: #2e2d1f;
+      --warn-border: #6b6641;
     }
   }
 
   :root[data-theme="dark"] {
-    --paper: #221d17;
-    --paper-raised: #2b241b;
-    --ink: #ece5d6;
-    --ink-soft: #b9ae98;
+    --paper: #1e1e19;
+    --paper-raised: #27271f;
+    --ink: #e9e6da;
+    --ink-soft: #b3af9d;
     --leather: #c98552;
     --leather-deep: #e0a06a;
-    --olive: #8a9678;
-    --dust: #4a4032;
-    --dust-line: #3a3226;
+    --olive: #93a17f;
+    --olive-deep: #b6c29e;
+    --dust: #46452f;
+    --dust-line: #38371f;
     --card-shadow: rgba(0, 0, 0, 0.4);
-    --warn-bg: #332a1a;
-    --warn-border: #7a5c2e;
+    --warn-bg: #2e2d1f;
+    --warn-border: #6b6641;
   }
 
   * { box-sizing: border-box; }
@@ -170,59 +173,22 @@
   }
 
   .btn-solid {
-    background: var(--leather);
-    border-color: var(--leather-deep);
-    color: #f8f3e9;
+    background: var(--olive-deep);
+    border-color: var(--olive-deep);
+    color: #f8f6ec;
   }
 
-  .btn-solid:hover { transform: translateY(-1px); background: var(--leather-deep); }
+  .btn-solid:hover { transform: translateY(-1px); background: var(--olive); }
   .btn-line:hover { transform: translateY(-1px); background: var(--paper-raised); }
 
-  .hero-tag {
-    position: relative;
-    justify-self: center;
-    background: var(--paper-raised);
-    border: 1.5px dashed var(--dust);
+  /* ---------- Illustration ---------- */
+
+  .still-life {
+    width: 100%;
+    height: auto;
+    display: block;
     border-radius: 10px;
-    padding: 1.5rem 1.3rem;
-    width: 200px;
-    transform: rotate(3deg);
     box-shadow: 0 10px 24px var(--card-shadow);
-  }
-
-  .hero-tag::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: var(--paper);
-    border: 1.5px dashed var(--dust);
-  }
-
-  .hero-tag .stamp {
-    font-family: 'Courier New', monospace;
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--olive);
-  }
-
-  .hero-tag .place {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--leather);
-    margin: 0.35rem 0;
-    line-height: 1.15;
-  }
-
-  .hero-tag .note {
-    font-size: 0.82rem;
-    color: var(--ink-soft);
   }
 
   /* ---------- Über ---------- */
@@ -289,7 +255,7 @@
   .principles .mark {
     font-family: 'Fraunces', Georgia, serif;
     font-style: italic;
-    color: var(--leather);
+    color: var(--olive-deep);
     font-size: 1.15rem;
     flex-shrink: 0;
   }
@@ -336,7 +302,7 @@
     font-family: 'Fraunces', Georgia, serif;
     font-style: italic;
     font-size: 1.3rem;
-    color: var(--leather);
+    color: var(--olive-deep);
     display: block;
     margin-bottom: 0.4rem;
   }
@@ -426,7 +392,7 @@
     font-family: 'Fraunces', Georgia, serif;
     font-size: 1.1rem;
     margin: 0 0 0.55rem;
-    color: var(--leather);
+    color: var(--olive-deep);
   }
 
   .sign-inner .block { font-size: 0.9rem; }
@@ -548,11 +514,22 @@
         <a class="btn btn-line" href="#besuch">Anfahrt &amp; Kontakt</a>
       </div>
     </div>
-    <div class="hero-tag" aria-hidden="true">
-      <div class="stamp">Zu finden in</div>
-      <div class="place">Brienz BE</div>
-      <div class="note">am Fusse der Berner Alpen</div>
-    </div>
+    <svg class="still-life" viewBox="0 0 200 200" role="img" aria-label="Illustration eines Antiquitäten-Stilllebens: Vase, gerahmtes Bild und Kommode">
+      <rect x="0" y="0" width="200" height="200" fill="var(--paper-raised)" rx="10" />
+      <line x1="14" y1="150" x2="186" y2="150" stroke="var(--dust-line)" stroke-width="2" />
+      <rect x="118" y="96" width="54" height="54" rx="2" fill="none" stroke="var(--olive-deep)" stroke-width="2" />
+      <rect x="128" y="106" width="34" height="34" fill="none" stroke="var(--olive-deep)" stroke-width="1.2" opacity="0.55" />
+      <path d="M132 130 L142 116 L150 126 L158 112 L164 130 Z" fill="none" stroke="var(--olive-deep)" stroke-width="1.4" stroke-linejoin="round" />
+      <g>
+        <path d="M46 150 L50 92 Q48 84 58 82 Q68 84 66 92 L70 150 Z" fill="none" stroke="var(--leather)" stroke-width="2.2" stroke-linejoin="round" />
+        <ellipse cx="58" cy="82" rx="9" ry="3.4" fill="none" stroke="var(--leather)" stroke-width="2" />
+        <path d="M52 108 Q58 100 64 108" fill="none" stroke="var(--leather)" stroke-width="1.4" opacity="0.6" />
+      </g>
+      <rect x="20" y="150" width="180" height="34" rx="3" fill="none" stroke="var(--ink-soft)" stroke-width="2" />
+      <line x1="20" y1="164" x2="200" y2="164" stroke="var(--ink-soft)" stroke-width="1.4" opacity="0.5" />
+      <circle cx="34" cy="174" r="2.4" fill="var(--ink-soft)" opacity="0.7" />
+      <circle cx="186" cy="174" r="2.4" fill="var(--ink-soft)" opacity="0.7" />
+    </svg>
   </div>
 </section>
 
@@ -560,8 +537,9 @@
   <div class="wrap about-grid">
     <div>
       <h2 style="font-family:'Fraunces',Georgia,serif; font-size:1.5rem; margin:0 0 0.9rem;">Über den Laden</h2>
-      <p>Münch Antiquitäten ist im Herzen von Brienz zu Hause, direkt an der Brunngasse. Wer sich für Möbel, Kleinkunst und Objekte mit Geschichte interessiert, findet hier eine sorgfältig zusammengestellte Auswahl.</p>
-      <p>Für Details zum aktuellen Sortiment oder eine Anfrage lohnt sich der persönliche Besuch vor Ort.</p>
+      <p>Münch Antiquitäten ist im Herzen von Brienz zu Hause, direkt an der Brunngasse und nur wenige Schritte von der Hauptstrasse entfernt. Wer sich für Möbel, Kleinkunst und Objekte mit Geschichte interessiert, findet hier eine sorgfältig zusammengestellte Auswahl statt eines wahllosen Warenlagers.</p>
+      <p>Brienz selbst ist seit jeher für sein Handwerk bekannt — von der Holzschnitzerei bis zur Geigenbauschule — und die Nähe zu dieser Tradition prägt auch das Sortiment im Laden. Viele Stücke stammen aus Haushaltsauflösungen und Nachlässen aus der Region, andere haben einen weiteren Weg hinter sich, bevor sie in der Brunngasse ihren Platz fanden.</p>
+      <p>Für Details zum aktuellen Sortiment, eine Schätzung oder eine konkrete Anfrage lohnt sich der persönliche Besuch vor Ort am meisten — viele Stücke lassen sich in Fotos nur schwer einfangen.</p>
     </div>
     <ul class="principles">
       <li>
@@ -575,7 +553,7 @@
         <span class="mark">II.</span>
         <div class="body">
           <h3>Mitten im Dorf</h3>
-          <p>Zentral an der Brunngasse gelegen, gut erreichbar zu Fuss.</p>
+          <p>Zentral an der Brunngasse gelegen, gut erreichbar zu Fuß.</p>
         </div>
       </li>
       <li>
@@ -595,6 +573,7 @@
       <h2>Was wir führen</h2>
       <span class="count">Auswahl &middot; wechselt laufend</span>
     </div>
+    <p style="color: var(--ink-soft); max-width: 62ch; margin: 0 0 1.4rem;">Das Sortiment gliedert sich grob in vier Bereiche, wobei sich die Grenzen im Alltag oft überschneiden. Was heute im Laden steht, hängt stark davon ab, was gerade eingekauft oder eingeliefert wurde — ein Blick vor Ort lohnt sich deshalb immer mehr als eine feste Liste.</p>
     <div class="cat-grid">
       <div class="cat">
         <span class="glyph">M</span>
