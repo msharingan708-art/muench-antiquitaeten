@@ -125,8 +125,12 @@
 
   /* ---------- Hero ---------- */
 
-  .hero {
+  section.hero {
     padding: 2.75rem 0 3rem;
+  }
+
+  .wrap.hero {
+    padding: 0 1.5rem;
     display: grid;
     grid-template-columns: 1.25fr 1fr;
     gap: 2.5rem;
@@ -460,9 +464,11 @@
   /* ---------- Responsive ---------- */
 
   @media (max-width: 760px) {
-    .hero {
-      grid-template-columns: 1fr;
+    section.hero {
       padding: 2rem 0 2.25rem;
+    }
+    .wrap.hero {
+      grid-template-columns: 1fr;
       gap: 1.75rem;
     }
     .hero-tag {
